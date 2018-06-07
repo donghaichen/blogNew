@@ -8,16 +8,12 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>docsify</title>
-    <link rel="icon" href="_media/favicon.ico">
-    <meta name="google-site-verification" content="6t0LoIeFksrjF4c9sqUEsVXiQNxLp2hgoqo0KryT-sE" />
+    <title>donghaichen</title>
+    <link rel="icon" href="favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="keywords" content="doc,docs,documentation,gitbook,creator,generator,github,jekyll,github-pages">
-    <meta name="description" content="A magical documentation generator.">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css" title="vue">
     <style>
@@ -30,9 +26,8 @@
         }
     </style>
 </head>
-
 <body>
-<div id="app">Loading ...</div>
+<div id="app">拼命加载中 ...</div>
 <script>
     window.$docsify = {
         alias: {
@@ -68,5 +63,4 @@
 <script src="//unpkg.com/prismjs/components/prism-php.min.js"></script>
 <script src="//unpkg.com/prismjs/components/prism-javascript.min.js"></script>
 </body>
-
 </html>

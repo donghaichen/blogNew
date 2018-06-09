@@ -28,12 +28,15 @@ $database = $database['mysql'];
 
 //其他配置
 date_default_timezone_set("PRC");
+
 //加载Eloquent  创建链接 | 设置全局静态可访问 | 启动Eloquent
 use Illuminate\Database\Capsule\Manager as DB;
 $db = new DB;
 $db->addConnection($database);
+// 设置全局静态可访问
 $db->setAsGlobal();
 $db->bootEloquent();
+
 log4('rtest',$_SERVER,'NOTICE');
 
 //运行项目

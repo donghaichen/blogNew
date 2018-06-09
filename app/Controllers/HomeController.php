@@ -9,7 +9,9 @@
 namespace App\Controllers;
 
 
+use App\Models\Post;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -20,19 +22,23 @@ class HomeController extends Controller
 
     public function sidebar()
     {
-        $rs = json_decode(httpRequest('https://cnodejs.org/api/v1/topics'), true)['data'];
+        $posts = Post::all()
+            ->pluck( 'title', 'id')
+            ->toArray();
         $html = '';
-        foreach ($rs as $k => $v)
+        foreach ($posts as $k => $v)
         {
-            $title = $v['title'];
-            $link = $v['id'];
-            $html .= "* [{$title}](topic/{$link}) \n" ;
+            $title = $v;
+            $id = $k;
+            $html .= "* [{$title}](post/{$id}) \n" ;
         }
         echo $html;
     }
-    public function topic($id)
+
+    public function showPost($id)
     {
-        $rs = json_decode(httpRequest('https://cnodejs.org/api/v1/topic/' . $id), true)['data']['content'];
-        echo $rs;
+        $post = Post::find($id)->toArray();
+        $post = str_replace('<!--markdown-->', '',$post['content']);
+        echo $post;
     }
 }

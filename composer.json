@@ -15,8 +15,8 @@
     "php": ">=7.0.0",
     "noahbuscher/macaw": "dev-master",
     "monolog/monolog": "^1.17",
-    "illuminate/database": "~5.0",
-    "filp/whoops": "*"
+    "filp/whoops": "*",
+    "illuminate/database": "^5.5"
   },
   "require-dev": {
   },

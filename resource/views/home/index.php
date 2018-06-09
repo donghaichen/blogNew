@@ -82,6 +82,7 @@
         homepage: 'README',
         repo: 'https://github.com/donghaichen',
         auto2top: true,
+//        onlyCover: true,
         coverpage: true,
 //        executeScript: true,
         loadSidebar: true,

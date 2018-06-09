@@ -24,7 +24,9 @@ class HomeController extends Controller
     {
         $posts = Post::all()
             ->pluck( 'title', 'id')
+//            ->sortByDesc('id')
             ->toArray();
+        krsort($posts);
         $html = '';
         foreach ($posts as $k => $v)
         {

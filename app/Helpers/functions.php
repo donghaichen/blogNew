@@ -1,15 +1,15 @@
 <?php
 
-require_once('./HyperDown/Parser.php');
-$parser = new HyperDown\Parser;
-$parser->enableHtml(true);
-$parser->_commonWhiteList .= '|img|cite|embed|iframe|video|source';
-$parser->_specialWhiteList = array_merge($parser->_specialWhiteList, array(
-    'ol'            =>  'ol|li',
-    'ul'            =>  'ul|li',
-    'blockquote'    =>  'blockquote',
-    'pre'           =>  'pre|code'
-));
+//require_once('./HyperDown/Parser.php');
+//$parser = new HyperDown\Parser;
+//$parser->enableHtml(true);
+//$parser->_commonWhiteList .= '|img|cite|embed|iframe|video|source';
+//$parser->_specialWhiteList = array_merge($parser->_specialWhiteList, array(
+//    'ol'            =>  'ol|li',
+//    'ul'            =>  'ul|li',
+//    'blockquote'    =>  'blockquote',
+//    'pre'           =>  'pre|code'
+//));
 // $html = $parser->makeHtml($text);
 
 //日志等级

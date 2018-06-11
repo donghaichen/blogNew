@@ -107,6 +107,7 @@
 <script src="//unpkg.com/prismjs/components/prism-markdown.min.js"></script>
 <script src="//unpkg.com/prismjs/components/prism-nginx.min.js"></script>
 <script src="//unpkg.com/prismjs/components/prism-php.min.js"></script>
+<script src="//unpkg.com/prismjs/components/prism-sql.min.js"></script>
 <script src="//unpkg.com/prismjs/components/prism-javascript.min.js"></script>
 </body>
 </html>

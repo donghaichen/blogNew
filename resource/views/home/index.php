@@ -125,7 +125,7 @@
         owner: 'donghaichen',
         admin: ['donghaichen'],
         id: location.pathname,
-        language: 'zh-CN'// Ensure uniqueness and length less than 50
+        language: 'zh-CN',// Ensure uniqueness and length less than 50
         distractionFreeMode: true
     })
 </script>

@@ -122,7 +122,7 @@
         repo: 'blogNew',
         owner: 'donghaichen',
         admin: ['donghaichen'],
-        id: location.pathname,
+        id: location,
         language: 'zh-CN',// Ensure uniqueness and length less than 50
         distractionFreeMode: true
     })

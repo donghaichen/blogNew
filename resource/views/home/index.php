@@ -116,7 +116,7 @@
     const gitalk = new Gitalk({
         clientID: '071bd8d83f2f1b161a45',
         clientSecret: '5347b7ff212b5f739282e0f1721e502c24486a74',
-        repo: 'donghaichen/blogNew',
+        repo: 'blogNew',
         owner: 'donghaichen',
         admin: ['donghaichen'],
         distractionFreeMode: true

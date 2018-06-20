@@ -8,4 +8,4 @@
     die('bye');
     
 ```
- :heart:
+Designed by docsify and laravel :heart:

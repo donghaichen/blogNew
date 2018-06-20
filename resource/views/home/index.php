@@ -70,6 +70,11 @@
             max-width: 200px;
             border-radius: 100%;
         }
+        .gt-container {
+            width: 800px;
+            margin: 0px auto 20px;
+            padding: 30px 15px 40px;
+        }
     </style>
 </head>
 <body>
@@ -101,7 +106,7 @@
         },
         formatUpdated: '{MM}/{DD} {HH}:{mm}',
     }
-</script> https://github.com/donghaichen/blogNew.git
+</script>
 <script src="//unpkg.com/docsify/lib/docsify.js"></script>
 <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
 <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
@@ -119,6 +124,8 @@
         repo: 'blogNew',
         owner: 'donghaichen',
         admin: ['donghaichen'],
+        id: location.pathname,
+        language: 'zh-CN'// Ensure uniqueness and length less than 50
         distractionFreeMode: true
     })
 </script>

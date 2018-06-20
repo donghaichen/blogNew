@@ -71,8 +71,6 @@
             border-radius: 100%;
         }
         .gt-container {
-            width: 800px;
-            margin: 0px auto 20px;
             padding: 30px 15px 40px;
         }
     </style>

@@ -8,11 +8,11 @@
 return [
     'mysql' => [
         'driver' => 'mysql',
-        'host' => '127.0.0.1',
+        'host' => 'rm-bp1d8g69sa7hh4l6z.mysql.rds.aliyuncs.com',
         'port' => '3306',
         'database' => 'blog',
-        'username' => 'root',
-        'password' => '123456',
+        'username' => 'blog',
+        'password' => 'Ggppc258!',
         'unix_socket' => '',
         'charset' => 'utf8mb4',
         'collation' => 'utf8mb4_unicode_ci',

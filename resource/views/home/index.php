@@ -119,7 +119,6 @@
         repo: 'blogNew',
         owner: 'donghaichen',
         admin: ['donghaichen', 'mamboer'],
-        id: 'Demo',
         distractionFreeMode: true
     })
 </script>

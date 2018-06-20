@@ -114,8 +114,8 @@
 <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
 <script>
     const gitalk = new Gitalk({
-        clientID: '0e9e499be91be3c0dd44',
-        clientSecret: 'c5dead06fc49d4327f23c2f3dab9ea5ea50f7fa6',
+        clientID: '071bd8d83f2f1b161a45',
+        clientSecret: '5347b7ff212b5f739282e0f1721e502c24486a74',
         repo: 'donghaichen/blogNew',
         owner: 'donghaichen',
         admin: ['donghaichen'],

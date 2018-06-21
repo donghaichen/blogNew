@@ -122,11 +122,11 @@
         repo: 'blogNew',
         owner: 'donghaichen',
         admin: ['donghaichen'],
-        id: location.href,
+        id: window.location.href,
         language: 'zh-CN',// Ensure uniqueness and length less than 50
         distractionFreeMode: true
     })
-    console.log(location.href)
+    console.log(window.location.href)
 </script>
 </body>
 </html>

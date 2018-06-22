@@ -116,8 +116,8 @@
 <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
 <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
 <script>
-        var id = window.location.href;
-        id = id.replace(/((https|http|ftp|rtsp|mms)?:\/\/)[^\s]+[$#]/g, '');
+        var href = window.location.href;
+        id = href.replace(/((https|http|ftp|rtsp|mms)?:\/\/)[^\s]+[$#]/g, '');
         var gitalk = new Gitalk(
             {
                 clientID: '071bd8d83f2f1b161a45',
@@ -126,27 +126,10 @@
                 owner: 'donghaichen',
                 admin: ['donghaichen'],
                 id: id,
-                language: 'zh-CN',// Ensure uniqueness and length less than 50
+                language: 'zh-CN',
                 distractionFreeMode: true
             }
         );
-        window.onhashchange = function() {
-            id = window.location.href;
-            id = id.replace(/((https|http|ftp|rtsp|mms)?:\/\/)[^\s]+[$#]/g, '');
-            var gitalk = new Gitalk(
-                {
-                    clientID: '071bd8d83f2f1b161a45',
-                    clientSecret: '5347b7ff212b5f739282e0f1721e502c24486a74',
-                    repo: 'blogNew',
-                    owner: 'donghaichen',
-                    admin: ['donghaichen'],
-                    id: id,
-                    language: 'zh-CN',// Ensure uniqueness and length less than 50
-                    distractionFreeMode: true
-                }
-            );
-        };
-
 
 </script>
 </body>

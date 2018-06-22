@@ -117,58 +117,57 @@
 <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
 <script>
 //    console.log(window.location.hash)
-//    var gitalk = new Gitalk(
-//        {
-//            clientID: '071bd8d83f2f1b161a45',
-//            clientSecret: '5347b7ff212b5f739282e0f1721e502c24486a74',
-//            repo: 'blogNew',
-//            owner: 'donghaichen',
-//            admin: ['donghaichen'],
-//            id: window.location.hash,
-//            language: 'zh-CN',// Ensure uniqueness and length less than 50
-//            distractionFreeMode: true
-//        }
-//    );
+    var gitalk = new Gitalk(
+        {
+            clientID: '071bd8d83f2f1b161a45',
+            clientSecret: '5347b7ff212b5f739282e0f1721e502c24486a74',
+            repo: 'blogNew',
+            owner: 'donghaichen',
+            admin: ['donghaichen'],
+            id: hashChangeFire(),
+            language: 'zh-CN',// Ensure uniqueness and length less than 50
+            distractionFreeMode: true
+        }
+    );
 
     //监听触发操作
-//    function hashChangeFire(){
-//        var id = window.location.href;
-//        window.onhashchange = function() {
-//            id = window.location.href;
-//        };
-//        console.log(id);
-//        id = id.replace(/((https|http|ftp|rtsp|mms)?:\/\/)[^\s]+[$#]/g, '');
-//        console.log(id);
-//        return id;
-//    }
-
-    function hashHandler(){
-        this.oldHash = window.location.hash;
-        this.Check;
-        this.newHash;
-
-        var that = this;
-        var detect = function(){
-            if(that.oldHash!=window.location.hash){
-                console.log("HASH CHANGED - new has" + window.location.hash);
-                that.oldHash = window.location.hash;
-                that.newHash = window.location.hash;
-                var gitalk = new Gitalk(
-                    {
-                        clientID: '071bd8d83f2f1b161a45',
-                        clientSecret: '5347b7ff212b5f739282e0f1721e502c24486a74',
-                        repo: 'blogNew',
-                        owner: 'donghaichen',
-                        admin: ['donghaichen'],
-                        id: that.newHash,
-                        language: 'zh-CN',// Ensure uniqueness and length less than 50
-                        distractionFreeMode: true
-                    }
-                );
-            }
+    function hashChangeFire(){
+        var id = window.location.href;
+        window.onhashchange = function() {
+            id = window.location.href;
         };
-        this.Check = setInterval(function(){ detect() }, 100);
+        id = id.replace(/((https|http|ftp|rtsp|mms)?:\/\/)[^\s]+[$#]/g, '');
+        console.log(id);
+        return id;
     }
+
+//    function hashHandler(){
+//        this.oldHash = window.location.hash;
+//        this.Check;
+//        this.newHash;
+//
+//        var that = this;
+//        var detect = function(){
+//            if(that.oldHash!=window.location.hash){
+//                console.log("HASH CHANGED - new has" + window.location.hash);
+//                that.oldHash = window.location.hash;
+//                that.newHash = window.location.hash;
+//                var gitalk = new Gitalk(
+//                    {
+//                        clientID: '071bd8d83f2f1b161a45',
+//                        clientSecret: '5347b7ff212b5f739282e0f1721e502c24486a74',
+//                        repo: 'blogNew',
+//                        owner: 'donghaichen',
+//                        admin: ['donghaichen'],
+//                        id: that.newHash,
+//                        language: 'zh-CN',// Ensure uniqueness and length less than 50
+//                        distractionFreeMode: true
+//                    }
+//                );
+//            }
+//        };
+//        this.Check = setInterval(function(){ detect() }, 100);
+//    }
 </script>
 </body>
 </html>

@@ -8,11 +8,11 @@
 return [
     'mysql' => [
         'driver' => 'mysql',
-        'host' => 'rm-bp1d8g69sa7hh4l6z9o.mysql.rds.aliyuncs.com',
+        'host' => env('DB_HOST'),
         'port' => '3306',
-        'database' => 'blog',
-        'username' => 'blog',
-        'password' => 'Ggppc258!',
+        'database' => env('DB_DATABASE'),
+        'username' => env('DB_USERNAME'),
+        'password' => env('DB_PASSWORD'),
         'unix_socket' => '',
         'charset' => 'utf8mb4',
         'collation' => 'utf8mb4_unicode_ci',

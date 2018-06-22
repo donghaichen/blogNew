@@ -136,12 +136,12 @@
         window.onhashchange = function() {
             id = window.location.href;
             id = id.replace(/((https|http|ftp|rtsp|mms)?:\/\/)[^\s]+[$#]/g, '');
-            console.log(id);
             return id;
         };
         id = id.replace(/((https|http|ftp|rtsp|mms)?:\/\/)[^\s]+[$#]/g, '');
         return id;
     }
+console.log(hashChangeFire());
 
 //    function hashHandler(){
 //        this.oldHash = window.location.hash;

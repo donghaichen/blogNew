@@ -70,9 +70,6 @@
             max-width: 200px;
             border-radius: 100%;
         }
-        .gt-container {
-            padding: 30px 15px 40px;
-        }
     </style>
 </head>
 <body>
@@ -83,14 +80,14 @@
             '/.*/_sidebar': '/_sidebar'
         },
         ext: '',
-        homepage: 'README',
         repo: 'https://github.com/donghaichen',
+        homepage: 'README',
         auto2top: true,
-//        onlyCover: true,
         coverpage: true,
-//        executeScript: true,
+        executeScript: true,
         loadSidebar: true,
-//        subMaxLevel: 2,
+        maxLevel: 4,
+        subMaxLevel: 2,
         name: 'Home',
         basePath: 'md/',
         search: {
@@ -103,9 +100,10 @@
             }
         },
         formatUpdated: '{MM}/{DD} {HH}:{mm}',
+
     }
 </script>
-<script src="//unpkg.com/docsify/lib/docsify.js"></script>
+<script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
 <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
 <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
 <script src="//unpkg.com/prismjs/components/prism-markdown.min.js"></script>
@@ -113,6 +111,43 @@
 <script src="//unpkg.com/prismjs/components/prism-php.min.js"></script>
 <script src="//unpkg.com/prismjs/components/prism-sql.min.js"></script>
 <script src="//unpkg.com/prismjs/components/prism-javascript.min.js"></script>
+
+<!---->
+<!--<script>-->
+<!--    window.$docsify = {-->
+<!--        alias: {-->
+<!--            '/.*/_sidebar': '/_sidebar'-->
+<!--        },-->
+<!--        ext: '',-->
+<!--        homepage: 'README',-->
+<!--        repo: 'https://github.com/donghaichen',-->
+<!--        auto2top: true,-->
+<!--        coverpage: true,-->
+<!--//        executeScript: true,-->
+<!--        loadSidebar: true,-->
+<!--        subMaxLevel: 2,-->
+<!--        name: 'Home',-->
+<!--        basePath: 'md/',-->
+<!--        search: {-->
+<!--            noData: {-->
+<!--                '/': '没有结果!'-->
+<!--            },-->
+<!--            paths: 'auto',-->
+<!--            placeholder: {-->
+<!--                '/': '搜索'-->
+<!--            }-->
+<!--        },-->
+<!--        formatUpdated: '{MM}/{DD} {HH}:{mm}',-->
+<!--    }-->
+<!--</script>-->
+<!--<script src="//unpkg.com/docsify/lib/docsify.js"></script>-->
+<!--<script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>-->
+<!--<script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>-->
+<!--<script src="//unpkg.com/prismjs/components/prism-markdown.min.js"></script>-->
+<!--<script src="//unpkg.com/prismjs/components/prism-nginx.min.js"></script>-->
+<!--<script src="//unpkg.com/prismjs/components/prism-php.min.js"></script>-->
+<!--<script src="//unpkg.com/prismjs/components/prism-sql.min.js"></script>-->
+<!--<script src="//unpkg.com/prismjs/components/prism-javascript.min.js"></script>-->
 <!--<script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>-->
 <!--<script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>-->
 <!--<script>-->

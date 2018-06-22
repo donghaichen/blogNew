@@ -32,7 +32,7 @@ class HomeController extends Controller
         {
             $title = $v;
             $id = $k;
-            $html .= "* [{$title}](post/{$id}) \n" ;
+            $html .= "*[{$title}](post/{$id}) \n" ;
         }
         echo $html;
     }
@@ -41,6 +41,7 @@ class HomeController extends Controller
     {
         $post = Post::find($id)->toArray();
         $post = str_replace('<!--markdown-->', '',$post['content']);
+//        $post = httpRequest('https://docsify.js.org/zh-cn/plugins.md');
         echo $post;
     }
 }

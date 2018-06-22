@@ -116,13 +116,14 @@
 <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
 <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
 <script>
+    var hashDetection = new hashHandler();
     var gitalkConfig = {
         clientID: '071bd8d83f2f1b161a45',
         clientSecret: '5347b7ff212b5f739282e0f1721e502c24486a74',
         repo: 'blogNew',
         owner: 'donghaichen',
         admin: ['donghaichen'],
-        id: hashChangeFire(),
+        id: hashDetection,
         language: 'zh-CN',// Ensure uniqueness and length less than 50
         distractionFreeMode: true
     };
@@ -149,14 +150,15 @@
         var that = this;
         var detect = function(){
             if(that.oldHash!=window.location.hash){
-                alert("HASH CHANGED - new has" + window.location.hash);
+                alert("HASH CHANGED - new has" + );
+                return window.location.hash;
                 that.oldHash = window.location.hash;
             }
         };
         this.Check = setInterval(function(){ detect() }, 100);
     }
 
-    var hashDetection = new hashHandler();
+
 
 
     //url变化监听器

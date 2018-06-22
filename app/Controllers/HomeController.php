@@ -17,9 +17,9 @@ class HomeController extends Controller
 {
     public function index()
     {
-        var_dump($_ENV);
-        var_dump(env('DB_HOST'));
-        exit();
+//        var_dump($_ENV);
+//        var_dump(env('DB_HOST'));
+//        exit();
         return view('home/index', []);
     }
 

@@ -149,7 +149,7 @@
         var that = this;
         var detect = function(){
             if(that.oldHash!=window.location.hash){
-                alert("HASH CHANGED - new has" + window.location.hash);
+                console.log("HASH CHANGED - new has" + window.location.hash);
                 that.oldHash = window.location.hash;
             }
         };

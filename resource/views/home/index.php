@@ -117,31 +117,30 @@
 <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
 <script>
     var hashDetection = new hashHandler();
-    var gitalkConfig = {
-        clientID: '071bd8d83f2f1b161a45',
-        clientSecret: '5347b7ff212b5f739282e0f1721e502c24486a74',
-        repo: 'blogNew',
-        owner: 'donghaichen',
-        admin: ['donghaichen'],
-        id: hashDetection,
-        language: 'zh-CN',// Ensure uniqueness and length less than 50
-        distractionFreeMode: true
-    };
     var gitalk = new Gitalk(
-        gitalkConfig
+        {
+            clientID: '071bd8d83f2f1b161a45',
+            clientSecret: '5347b7ff212b5f739282e0f1721e502c24486a74',
+            repo: 'blogNew',
+            owner: 'donghaichen',
+            admin: ['donghaichen'],
+            id: hashDetection,
+            language: 'zh-CN',// Ensure uniqueness and length less than 50
+            distractionFreeMode: true
+        }
     );
 
     //监听触发操作
-    function hashChangeFire(){
-        var id = window.location.href;
-        window.onhashchange = function() {
-            id = window.location.href;
-        };
-        console.log(id);
-        id = id.replace(/((https|http|ftp|rtsp|mms)?:\/\/)[^\s]+[$#]/g, '');
-        console.log(id);
-        return id;
-    }
+//    function hashChangeFire(){
+//        var id = window.location.href;
+//        window.onhashchange = function() {
+//            id = window.location.href;
+//        };
+//        console.log(id);
+//        id = id.replace(/((https|http|ftp|rtsp|mms)?:\/\/)[^\s]+[$#]/g, '');
+//        console.log(id);
+//        return id;
+//    }
 
     function hashHandler(){
         this.oldHash = window.location.hash;
@@ -150,7 +149,7 @@
         var that = this;
         var detect = function(){
             if(that.oldHash!=window.location.hash){
-                alert("HASH CHANGED - new has" + window.location.hash;);
+                alert("HASH CHANGED - new has" + window.location.hash);
                 return window.location.hash;
                 that.oldHash = window.location.hash;
             }

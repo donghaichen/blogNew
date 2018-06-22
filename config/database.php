@@ -8,7 +8,7 @@
 return [
     'mysql' => [
         'driver' => 'mysql',
-        'host' => 'rm-bp1d8g69sa7hh4l6z.mysql.rds.aliyuncs.com',
+        'host' => 'rm-bp1d8g69sa7hh4l6z9o.mysql.rds.aliyuncs.com',
         'port' => '3306',
         'database' => 'blog',
         'username' => 'blog',

@@ -190,3 +190,42 @@ function lastSql()
     ksort($sql);
     return $sql;
 }
+
+if(!function_exists('get_env'))
+{
+    function get_env($env_file = '')
+    {
+        $env_file = $env_file ? $env_file : APP_PATH . '/.env';
+        $env = parse_ini_file($env_file, true);
+        foreach ($env as $key => $val) {
+            $name = strtoupper($key);
+            if (is_array($val)) {
+                foreach ($val as $k => $v) {
+                    $item = $name . '_' . strtoupper($k);
+                    putenv("$item=$v");
+                }
+            } else {
+                putenv("$name=$val");
+            }
+        }
+    }
+}
+
+if(! function_exists('env')){
+    /*
+     * 获取环境变量
+     *
+     * @param string $key
+     * @param strigin $default
+     * @return string
+     */
+    function env($key, $default = null)
+    {
+        $key =  str_replace('.', '_', strtoupper($key));
+        $value = getenv($key);
+        if ($value === false) {
+            return value($default);
+        }
+        return urldecode($value);
+    }
+}

@@ -116,26 +116,26 @@
 <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
 <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
 <script>
+    const gitalk = new Gitalk({
+        clientID: '071bd8d83f2f1b161a45',
+        clientSecret: '5347b7ff212b5f739282e0f1721e502c24486a74',
+        repo: 'blogNew',
+        owner: 'donghaichen',
+        admin: ['donghaichen'],
+        id: hashChangeFire(),
+        language: 'zh-CN',// Ensure uniqueness and length less than 50
+        distractionFreeMode: true
+    })
     //监听触发操作
     function hashChangeFire(){
         var id = window.location.href;
-        id = id.replace(/((https|http|ftp|rtsp|mms)?:\/\/)[^\s]+[$#]/g, '');
-        console.log(id);
+        window.onhashchange = function(id) {
+            id = id.replace(/((https|http|ftp|rtsp|mms)?:\/\/)[^\s]+[$#]/g, '');
+            console.log(id);
+        };
         return id;
+    }
 
-    }
-    window.onhashchange = function() {
-        const gitalk = new Gitalk({
-            clientID: '071bd8d83f2f1b161a45',
-            clientSecret: '5347b7ff212b5f739282e0f1721e502c24486a74',
-            repo: 'blogNew',
-            owner: 'donghaichen',
-            admin: ['donghaichen'],
-            id: hashChangeFire(),
-            language: 'zh-CN',// Ensure uniqueness and length less than 50
-            distractionFreeMode: true
-        })
-    }
 
     //url变化监听器
 //    if( ('onhashchange' in window) && ((typeof document.documentMode==='undefined') || document.documentMode==8)) {

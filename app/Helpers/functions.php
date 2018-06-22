@@ -196,6 +196,7 @@ if(!function_exists('get_env'))
     function get_env($env_file = '')
     {
         $env_file = $env_file ? $env_file : APP_PATH . '/.env';
+        var_dump($env_file);
         $env = parse_ini_file($env_file, true);
         foreach ($env as $key => $val) {
             $name = strtoupper($key);

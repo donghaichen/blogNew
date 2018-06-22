@@ -135,9 +135,10 @@
         var id = window.location.href;
         window.onhashchange = function() {
             id = window.location.href;
+            console.log(id);
         };
         id = id.replace(/((https|http|ftp|rtsp|mms)?:\/\/)[^\s]+[$#]/g, '');
-        console.log(id);
+
         return id;
     }
 

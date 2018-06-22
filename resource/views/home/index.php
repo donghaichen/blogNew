@@ -46,7 +46,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css" title="vue">
-    <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
+<!--    <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">-->
     <style>
         nav.app-nav li ul {
             min-width: 100px;
@@ -113,24 +113,24 @@
 <script src="//unpkg.com/prismjs/components/prism-php.min.js"></script>
 <script src="//unpkg.com/prismjs/components/prism-sql.min.js"></script>
 <script src="//unpkg.com/prismjs/components/prism-javascript.min.js"></script>
-<script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
-<script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
-<script>
-        var href = window.location.href;
-        id = href.replace(/((https|http|ftp|rtsp|mms)?:\/\/)[^\s]+[$#]/g, '');
-        var gitalk = new Gitalk(
-            {
-                clientID: '071bd8d83f2f1b161a45',
-                clientSecret: '5347b7ff212b5f739282e0f1721e502c24486a74',
-                repo: 'blogNew',
-                owner: 'donghaichen',
-                admin: ['donghaichen'],
-                id: id,
-                language: 'zh-CN',
-                distractionFreeMode: true
-            }
-        );
-
-</script>
+<!--<script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>-->
+<!--<script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>-->
+<!--<script>-->
+<!--        var href = window.location.href;-->
+<!--        id = href.replace(/((https|http|ftp|rtsp|mms)?:\/\/)[^\s]+[$#]/g, '');-->
+<!--        var gitalk = new Gitalk(-->
+<!--            {-->
+<!--                clientID: '071bd8d83f2f1b161a45',-->
+<!--                clientSecret: '5347b7ff212b5f739282e0f1721e502c24486a74',-->
+<!--                repo: 'blogNew',-->
+<!--                owner: 'donghaichen',-->
+<!--                admin: ['donghaichen'],-->
+<!--                id: id,-->
+<!--                language: 'zh-CN',-->
+<!--                distractionFreeMode: true-->
+<!--            }-->
+<!--        );-->
+<!---->
+<!--</script>-->
 </body>
 </html>

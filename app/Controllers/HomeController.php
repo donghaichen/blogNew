@@ -32,7 +32,7 @@ class HomeController extends Controller
         {
             $title = $v;
             $id = $k;
-            $html .= "*[{$title}](post/{$id}) \n" ;
+            $html .= "* [{$title}](post/{$id}) \n" ;
         }
         echo $html;
     }

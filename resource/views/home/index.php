@@ -116,8 +116,7 @@
 <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
 <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
 <script>
-    var hashDetection = new hashHandler();
-    console.log(hashDetection.newHash)
+    console.log(window.location.hash)
     var gitalk = new Gitalk(
         {
             clientID: '071bd8d83f2f1b161a45',
@@ -125,7 +124,7 @@
             repo: 'blogNew',
             owner: 'donghaichen',
             admin: ['donghaichen'],
-            id: hashDetection.newHash,
+            id: window.location.hash,
             language: 'zh-CN',// Ensure uniqueness and length less than 50
             distractionFreeMode: true
         }
@@ -154,6 +153,18 @@
                 console.log("HASH CHANGED - new has" + window.location.hash);
                 that.oldHash = window.location.hash;
                 that.newHash = window.location.hash;
+                var gitalk = new Gitalk(
+                    {
+                        clientID: '071bd8d83f2f1b161a45',
+                        clientSecret: '5347b7ff212b5f739282e0f1721e502c24486a74',
+                        repo: 'blogNew',
+                        owner: 'donghaichen',
+                        admin: ['donghaichen'],
+                        id: that.newHash,
+                        language: 'zh-CN',// Ensure uniqueness and length less than 50
+                        distractionFreeMode: true
+                    }
+                );
             }
         };
         this.Check = setInterval(function(){ detect() }, 100);

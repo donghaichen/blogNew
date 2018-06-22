@@ -191,12 +191,11 @@ function lastSql()
     return $sql;
 }
 
-if(!function_exists('get_env'))
+if(!function_exists('setEnv'))
 {
-    function get_env($env_file = '')
+    function setEnv($env_file = '')
     {
         $env_file = $env_file ? $env_file : APP_PATH . '/.env';
-        var_dump($env_file);
         $env = parse_ini_file($env_file, true);
         foreach ($env as $key => $val) {
             $name = strtoupper($key);
@@ -212,7 +211,7 @@ if(!function_exists('get_env'))
     }
 }
 
-if(! function_exists('env')){
+if(! function_exists('getEnv')){
     /*
      * 获取环境变量
      *
@@ -220,9 +219,11 @@ if(! function_exists('env')){
      * @param strigin $default
      * @return string
      */
-    function env($key, $default = null)
+    function getEnv($key, $default = null)
     {
         $key =  str_replace('.', '_', strtoupper($key));
+        var_dump($key);
+        exit();
         $value = getenv($key);
         if ($value === false) {
             return value($default);

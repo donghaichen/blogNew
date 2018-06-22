@@ -116,7 +116,7 @@
 <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
 <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
 <script>
-    const gitalk = new Gitalk({
+    var gitalk = new Gitalk({
         clientID: '071bd8d83f2f1b161a45',
         clientSecret: '5347b7ff212b5f739282e0f1721e502c24486a74',
         repo: 'blogNew',

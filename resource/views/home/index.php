@@ -116,19 +116,19 @@
 <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
 <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
 <script>
-    console.log(window.location.hash)
-    var gitalk = new Gitalk(
-        {
-            clientID: '071bd8d83f2f1b161a45',
-            clientSecret: '5347b7ff212b5f739282e0f1721e502c24486a74',
-            repo: 'blogNew',
-            owner: 'donghaichen',
-            admin: ['donghaichen'],
-            id: window.location.hash,
-            language: 'zh-CN',// Ensure uniqueness and length less than 50
-            distractionFreeMode: true
-        }
-    );
+//    console.log(window.location.hash)
+//    var gitalk = new Gitalk(
+//        {
+//            clientID: '071bd8d83f2f1b161a45',
+//            clientSecret: '5347b7ff212b5f739282e0f1721e502c24486a74',
+//            repo: 'blogNew',
+//            owner: 'donghaichen',
+//            admin: ['donghaichen'],
+//            id: window.location.hash,
+//            language: 'zh-CN',// Ensure uniqueness and length less than 50
+//            distractionFreeMode: true
+//        }
+//    );
 
     //监听触发操作
 //    function hashChangeFire(){

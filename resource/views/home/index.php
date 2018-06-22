@@ -117,6 +117,7 @@
 <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
 <script>
     var hashDetection = new hashHandler();
+    console.log(hashDetection)
     var gitalk = new Gitalk(
         {
             clientID: '071bd8d83f2f1b161a45',

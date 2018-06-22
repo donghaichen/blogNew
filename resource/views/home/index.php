@@ -117,7 +117,7 @@
 <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
 <script>
     var hashDetection = new hashHandler();
-    console.log(hashDetection)
+    console.log(hashDetection.newHash)
     var gitalk = new Gitalk(
         {
             clientID: '071bd8d83f2f1b161a45',
@@ -125,7 +125,7 @@
             repo: 'blogNew',
             owner: 'donghaichen',
             admin: ['donghaichen'],
-            id: hashDetection,
+            id: hashDetection.newHash,
             language: 'zh-CN',// Ensure uniqueness and length less than 50
             distractionFreeMode: true
         }
@@ -146,16 +146,17 @@
     function hashHandler(){
         this.oldHash = window.location.hash;
         this.Check;
+        this.newHash;
 
         var that = this;
         var detect = function(){
             if(that.oldHash!=window.location.hash){
                 console.log("HASH CHANGED - new has" + window.location.hash);
                 that.oldHash = window.location.hash;
+                that.newHash = window.location.hash;
             }
         };
         this.Check = setInterval(function(){ detect() }, 100);
-        return window.location.hash;
     }
 </script>
 </body>

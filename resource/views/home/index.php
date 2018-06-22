@@ -125,14 +125,16 @@
         id: hashChangeFire(),
         language: 'zh-CN',// Ensure uniqueness and length less than 50
         distractionFreeMode: true
-    })
+    });
     //监听触发操作
     function hashChangeFire(){
         var id = window.location.href;
-        window.onhashchange = function(id) {
-            id = id.replace(/((https|http|ftp|rtsp|mms)?:\/\/)[^\s]+[$#]/g, '');
-            console.log(id);
+        window.onhashchange = function() {
+            id = window.location.href;
         };
+        console.log(id);
+        id = id.replace(/((https|http|ftp|rtsp|mms)?:\/\/)[^\s]+[$#]/g, '');
+        console.log(id);
         return id;
     }
 
